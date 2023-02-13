@@ -1,6 +1,13 @@
-class Teacher
+require_relative './user.rb'
 
-  KNOWLEDGE = ["a String is a type of data in Ruby", "programming is hard, but it's worth it", "javascript async web request", "Ruby method call definition", "object oriented dog cat class instance", "class method class variable instance method instance variable", "programming computers hacking learning terminal", "bash Ruby rvm update certs"]
+class Teacher < User
+  KNOWLEDGE = [
+    "Everything in Ruby is an Object",
+    "In Ruby, everything is true except for false and nil",
+    "Blocks in Ruby can be defined with {} or do/end"
+  ]
 
-  
+  def teach
+    KNOWLEDGE.sample
+  end
 end
